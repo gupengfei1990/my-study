@@ -12,5 +12,12 @@
     <groupId>com.my.study.core</groupId>
     <artifactId>core</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>
+    </dependencies>
 
 </project>

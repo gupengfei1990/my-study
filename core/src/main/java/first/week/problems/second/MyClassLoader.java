@@ -1,4 +1,4 @@
-package first.week.problem.second;
+package first.week.problems.second;
 
 import java.io.IOException;
 import java.io.InputStream;

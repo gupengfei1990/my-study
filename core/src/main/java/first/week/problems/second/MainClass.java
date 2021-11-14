@@ -1,4 +1,4 @@
-package first.week.problem.second;
+package first.week.problems.second;
 
 import java.lang.reflect.Method;
 
