@@ -1,4 +1,4 @@
-package homework.week02.sixth;
+package homework.week02.homework6;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
