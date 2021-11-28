@@ -2,7 +2,6 @@ package homework.week04.homework2;
 
 import javax.xml.ws.Holder;
 import java.util.concurrent.*;
-import java.util.function.Supplier;
 
 public class MainClass {
 
@@ -42,7 +41,7 @@ public class MainClass {
         Runnable runnable4 = () -> result4.value = myFunction();
         Future future4 = threadPool.submit(runnable4);
         future4.get();
-        System.out.println("方式4拿到方法返回值：" + result4);
+        System.out.println("方式4拿到方法返回值：" + result4.value);
         //============方式4 end============
 
         //===========方式5 start===========
