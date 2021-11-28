@@ -36,6 +36,7 @@ public class MainClass {
         System.out.println("方式3拿到方法返回值：" + result3);
         //============方式3 end============
 
+
         //===========方式4 start===========
         Holder<String> result4 = new Holder<>();
         Runnable runnable4 = () -> result4.value = myFunction();
@@ -44,11 +45,13 @@ public class MainClass {
         System.out.println("方式4拿到方法返回值：" + result4.value);
         //============方式4 end============
 
+
         //===========方式5 start===========
         Holder<String> result5 = new Holder<>();
         Future<Holder<String>> future5 = threadPool.submit(() -> result5.value = myFunction(), result5);
         System.out.println("方式5拿到方法返回值：" + future5.get().value);
         //============方式5 end============
+
 
         //===========方式6 start===========
         FutureTask<String> task6 = new FutureTask<>(() -> myFunction());
@@ -64,6 +67,7 @@ public class MainClass {
         String result7 = future7.get();
         System.out.println("方式7拿到方法返回值：" + result7);
         //============方式7 end============
+
 
         //===========方式8 start===========
         String result8 = CompletableFuture.supplyAsync(() -> myFunction()).get();
