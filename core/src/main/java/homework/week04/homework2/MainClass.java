@@ -74,10 +74,25 @@ public class MainClass {
         System.out.println("方式8拿到方法返回值：" + result8);
         //============方式8 end============
 
+
+        //===========方式9 start===========
+        Holder<String> result9 = new Holder<>();
+        Runnable runnable9 = () -> result9.value = myFunction();
+        threadPool.submit(runnable9);
+        threadPool.shutdown();
+        threadPool.awaitTermination(5, TimeUnit.SECONDS);
+        System.out.println("方式9拿到方法返回值：" + result9.value);
+        //============方式9 end============
+
     }
 
 
     private static String myFunction() {
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "这是一个方法返回值";
     }
 }
